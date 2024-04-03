@@ -22,6 +22,9 @@ jobs:
         dotnet-version: 8.0.x
     - name: Restore dependencies
       run: dotnet restore
+    - name: install dependencies
+      uses:  bahmutov/npm-install@v1
+      
     - name: Build
       run:  npm run build
     - name: upload production ready build files
