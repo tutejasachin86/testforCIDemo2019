@@ -20,7 +20,14 @@ namespace TestWebApplication.Controllers
 
         public IActionResult Index()
         {
-            
+            try
+            {
+
+            }
+            catch (Exception)
+            {
+
+            }
             return View();
         }
 
