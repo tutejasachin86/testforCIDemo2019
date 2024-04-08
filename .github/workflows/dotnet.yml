@@ -30,6 +30,29 @@ jobs:
       with:
         name: production-files
         path: ./build
+    - name: Download Artifact
+      uses: actions/download-artifact@v2
+      with:
+         name: production-files
+         path: ./build
+
+  deploy:
+    name: deploy
+    needs: build
+    runs-on: ubuntu-latest
+    if : github.ref == 'ref/heads/develop'
+    steps:
+      - name: Download Artifact
+        uses: actions/download-artifact@v2
+        with:
+         name: production-files
+         path: ./build
+      - name: Deploy to git hub pages
+        uses: peaceris/actions-gh-page@v3
+        with:
+         github_token : ${{secrets.TOKEN}}
+         path: ./build
+    
 
 
    
