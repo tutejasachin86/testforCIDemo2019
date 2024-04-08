@@ -43,7 +43,7 @@ jobs:
          name: production-files
          path: ./build
       - name: Deploy to git hub pages
-        uses: peaceris/actions-gh-page@v3
+        uses: peaceris/actions-testforCIDemo@v3
         with:
          github_token : ${{secrets.TOKEN}}
          path: ./build
