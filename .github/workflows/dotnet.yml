@@ -43,6 +43,7 @@ jobs:
          name: production-files
          path: ./build
       - name: Deploy to git hub pages1
+        uses: actions/build-push-action@v2
         with:
          github_token : ${{secrets.TOKEN}}
          path: ./build
