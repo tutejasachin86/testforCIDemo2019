@@ -25,9 +25,9 @@ jobs:
       
     - name: Build
       run:  dotnet build
-    - name: Publish 
-      run:  |
-        dotnet publish "${{github.workspace}}/TestWebApplication/TestWebApplication.csproj"  -c Release -o testforCIDemo2019
+      
+    - name: Publish
+      run: dotnet publish
       
     - name: upload production ready build files
       uses: actions/upload-artifact@v2
