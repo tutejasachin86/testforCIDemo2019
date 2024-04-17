@@ -34,12 +34,6 @@ jobs:
       with:
         name: WebApp1
         path: /home/runner/work/testforCIDemo2019/testforCIDemo2019/TestWebApplication/bin/Debug/net5.0/publish/
-      
-    - name: upload production ready build files
-      uses: actions/upload-artifact@v2
-      with:
-        name: production-files
-        path: ./TestWebApplication/githubdemo/Workflows
 
   deploy:
     name: deploy
