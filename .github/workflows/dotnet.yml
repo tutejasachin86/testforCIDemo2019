@@ -49,8 +49,8 @@ jobs:
       - name: Deploy Release
         uses: actions/deploy-pages@v1
         with:
-         github_token : ${{secrets.TOKEN}}
-         path: ./build
+         
+         path: /home/runner/work/testforCIDemo2019/testforCIDemo2019/TestWebApplication/bin/Debug/net5.0/publish/
    
   
     
